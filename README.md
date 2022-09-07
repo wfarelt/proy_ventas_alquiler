@@ -18,3 +18,9 @@ python manage.py migrate
 
 # Levantar servidor
 python manage.py runserver
+
+# Uso de PostgreSQL con Django
+https://djangocentral.com/using-postgresql-with-django/
+
+# Creating A Super User In Django
+https://djangocentral.com/creating-super-user-in-django/
