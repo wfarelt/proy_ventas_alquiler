@@ -7,4 +7,5 @@ from django.views import generic
 
 class Home(LoginRequiredMixin, generic.TemplateView):
     template_name = 'index.html'
+    login_url = '/login'
     

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.css' %}" />
+    <title>Iniciar Sesión</title>
+    
+</head>
+<body class="text-center mt-5">
+  <div class="container">
+    <div class="text-center">
+      <div class="card">
+        <div class="card-header">
+          Iniciar Sesión
+        </div>
+        <div class="card-body">
+          <form class="form-signin" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-primary" type="submit">Iniciar</button>
+          </form>
+        </div>
+        <div class="card-footer">
+          <p class="text-muted">© 2022</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
