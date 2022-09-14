@@ -26,7 +26,12 @@
             <li><a href="services.html">Services</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="{%url 'logout' %}">Salir</a></li>
+            <li class="has-children">
+              <a href="#">{{ user }}</a>
+              <ul class="dropdown">
+                <li><a href="{%url 'logout' %}">Salir</a></li>
+              </ul>
+            </li>
           </ul>
 
           <a
