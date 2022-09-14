@@ -22,5 +22,8 @@ python manage.py runserver
 # Uso de PostgreSQL con Django
 https://djangocentral.com/using-postgresql-with-django/
 
+# Comandos de psql
+https://www.librebyte.net/base-de-datos/comandos-para-administrar-postgres/
+
 # Creating A Super User In Django
 https://djangocentral.com/creating-super-user-in-django/

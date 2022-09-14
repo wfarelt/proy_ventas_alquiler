@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div class="section mt-5">
+    <div class="container">
+        <div class="mb-3">
+            <h2>Categorias</h2>
+            <button>Nuevo</button>
+            <input type="search" name="search" id="id_search" placeholder="Buscar..">
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in obj %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.description }}</td>
+                        <td><a href="">Editar</a></td>
+                        <td><a href="">Excluir</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>  
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
