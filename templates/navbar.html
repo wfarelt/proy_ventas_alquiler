@@ -14,12 +14,12 @@
         <a href="index.html" class="logo m-0 float-start">Property</a>
 
         <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
-          <li class="active"><a href="{% url 'index' %}">Home</a></li>
+          <li class="active"><a href="{% url 'catalog:index' %}">Home</a></li>
           <li class="has-children">
             <a href="#">Catalog</a>
             <ul class="dropdown">
-              <li><a href="{% url 'category_list' %}">Categories</a></li>
-              <li><a href="{% url 'service_list' %}">Services</a></li>
+              <li><a href="{% url 'catalog:category_list' %}">Categories</a></li>
+              <li><a href="{% url 'catalog:service_list' %}">Services</a></li>
               <li class="has-children">
                 <a href="#">Dropdown</a>
                 <ul class="dropdown">
@@ -36,7 +36,7 @@
           <li class="has-children">
             <a href="#">{{ user }}</a>
             <ul class="dropdown">
-              <li><a href="{%url 'logout' %}">Salir</a></li>
+              <li><a href="{%url 'catalog:logout' %}">Salir</a></li>
             </ul>
           </li>
         </ul>

@@ -1,0 +1,31 @@
+<div class="modal-dialog">
+    {% if obj %}
+    <form method="POST" role="form" action="">
+    {% else %}
+    <form method="POST" role="form" action="{% url 'catalog:category_new' %}">
+    {% endif %}
+        {% csrf_token %}
+        <div class="modal-content">
+            <div class="modal-header align-items-center p3 p-md-5">
+                <h2 class="modal-title" id="exampleModalGridTitle">
+                    {% if obj %} Editar {% else %} Nueva {% endif %} Categoria
+                </h2>
+            </div>
+            <div class="modal-body p3 p-md-5">
+                <h3 class="h5 mb-5">Información de Unidad de medida</h3>
+
+                {{ form.as_p }}
+
+                <div class="form-check">
+                    {{ form.estado }}
+                    <label class="form-check-label" for="id_estado">Activo</label>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center mb-4">
+                <a href="#" rel="modal:close" class="btn btn-danger">Close</a>
+                <button type="submit" class="btn btn-primary  btn-pill"> Guardar </button>
+            </div>
+        </div>
+    </form>
+</div>

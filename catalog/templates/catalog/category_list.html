@@ -9,7 +9,8 @@
     <div class="container">
         <div class="mb-3">
             <h2>Categorias</h2>
-            <button>Nuevo</button>
+            <!-- Link to open the modal -->
+            <a href="{% url 'catalog:category_new' %}" rel="modal:open" class="btn btn-primary btn-pill">Nuevo</a>
             <input type="search" name="search" id="id_search" placeholder="Buscar..">
         </div>
         <div class="table-responsive">
@@ -18,6 +19,7 @@
                     <tr>
                         <th>Nombre</th>
                         <th>Descripción</th>
+                        <th>Estado</th>
                         <th>Editar</th>
                         <th>Excluir</th>
                     </tr>
@@ -27,6 +29,7 @@
                     <tr>
                         <td>{{ item.name }}</td>
                         <td>{{ item.description }}</td>
+                        <td>{{ item.status }}</td>
                         <td><a href="">Editar</a></td>
                         <td><a href="">Excluir</a></td>
                     </tr>
